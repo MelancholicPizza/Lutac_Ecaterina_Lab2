@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:Lutac_Ecaterina_Lab2Context"
+    }
+  }
+}
