@@ -17,5 +17,6 @@ namespace Lutac_Ecaterina_Lab2.Data
         public DbSet<Lutac_Ecaterina_Lab2.Models.Book> Book { get; set; } = default!;
         public DbSet<Lutac_Ecaterina_Lab2.Models.Publisher> Publisher { get; set; } = default!;
         public DbSet<Lutac_Ecaterina_Lab2.Models.Author> Author { get; set; } = default!;
+        public DbSet<Lutac_Ecaterina_Lab2.Models.Category> Category { get; set; } = default!;
     }
 }

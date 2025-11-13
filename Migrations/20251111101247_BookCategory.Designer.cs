@@ -4,6 +4,7 @@ using Lutac_Ecaterina_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lutac_Ecaterina_Lab2.Migrations
 {
     [DbContext(typeof(Lutac_Ecaterina_Lab2Context))]
-    partial class Lutac_Ecaterina_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20251111101247_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
