@@ -15,7 +15,7 @@ namespace Lutac_Ecaterina_Lab2.Pages.Books
         }
 
         [BindProperty]
-        public Book Book { get; set; } = default!;
+        public Book Book { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,7 +27,6 @@ namespace Lutac_Ecaterina_Lab2.Pages.Books
             //se va include Author conform cu sarcina de la lab 2
             Book = await _context.Book
                 .Include(b => b.Publisher)
-                //.Include(b => b.Author)
                 .Include(b => b.BookCategories).ThenInclude(b => b.Category)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
