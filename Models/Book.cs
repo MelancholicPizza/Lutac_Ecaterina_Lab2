@@ -10,6 +10,7 @@ namespace Lutac_Ecaterina_Lab2.Models
         [Display(Name = "Book Title")]
         public string Title { get; set; }
         [Column(TypeName = "decimal(6, 2)")]
+        [Range(0.01, 500)]
         public decimal Price { get; set; }
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
