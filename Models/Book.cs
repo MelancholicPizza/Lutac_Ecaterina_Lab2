@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
@@ -7,12 +8,15 @@ namespace Lutac_Ecaterina_Lab2.Models
     public class Book
     {
         public int ID { get; set; }
+        [Required]
+        [StringLength(150, MinimumLength = 3)]
         [Display(Name = "Book Title")]
         public string Title { get; set; }
         [Column(TypeName = "decimal(6, 2)")]
         [Range(0.01, 500)]
         public decimal Price { get; set; }
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd MMMM yyyy}")]
         public DateTime PublishingDate { get; set; }
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; }
