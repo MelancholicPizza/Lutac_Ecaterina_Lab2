@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Lutac_Ecaterina_Lab2.Data;
 using Lutac_Ecaterina_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lutac_Ecaterina_Lab2.Pages.Publishers
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : PageModel
     {
         private readonly Lutac_Ecaterina_Lab2.Data.Lutac_Ecaterina_Lab2Context _context;

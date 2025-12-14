@@ -15,7 +15,13 @@ builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AuthorizeFolder("/Books");
     options.Conventions.AllowAnonymousToPage("/Books/Index");
-    options.Conventions.AllowAnonymousToPage("/Books/Details");
+    options.Conventions.AllowAnonymousToPage("/Books/Details"); 
+    options.Conventions.AuthorizeFolder("/Publishers");
+    options.Conventions.AllowAnonymousToPage("/Publishers/Index");
+    options.Conventions.AllowAnonymousToPage("/Publishers/Details"); 
+    options.Conventions.AuthorizeFolder("/Categories");
+    options.Conventions.AllowAnonymousToPage("/Categories/Index");
+    options.Conventions.AllowAnonymousToPage("/Categories/Details");
     options.Conventions.AuthorizeFolder("/Members", "AdminPolicy");
 });
 builder.Services.AddDbContext<Lutac_Ecaterina_Lab2Context>(options =>
